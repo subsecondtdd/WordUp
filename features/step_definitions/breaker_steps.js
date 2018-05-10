@@ -21,5 +21,5 @@ When('{Breaker} makes a guess', async function (breaker) {
 })
 
 Then('{Breaker} should be waiting for a score', function (breaker) {
-  assert.equal(breaker.getCurrentGame().state, 'waiting-for-score')
+  assert.equal(breaker.getCurrentState(), 'waiting-for-score')
 })

@@ -18,7 +18,7 @@ module.exports = class Breaker {
 
   // Test Views
 
-  getCurrentGame() {
-    return this._currentGame
+  getCurrentState() {
+    return this._currentGame.state
   }
 }
