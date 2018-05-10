@@ -14,4 +14,4 @@ Feature: Create a game
 
   Scenario: you create a game
     When Mike creates a game
-    Then Mike should be waiting for breaker to join
+    Then Mike should be waiting for a breaker to join
