@@ -13,6 +13,10 @@ module.exports = class Maker {
     await this._engine.createGame({gameId, word})
   }
 
+  async score({score}) {
+    await this._engine.score({ gameId: this._currentGame.gameId, score })
+  }
+
   // Test Views
 
   getCurrentGame() {

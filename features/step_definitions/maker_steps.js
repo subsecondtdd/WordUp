@@ -13,6 +13,10 @@ When('{Maker} creates a game', async function (maker) {
   await maker.createGame({word: 'steak'})
 })
 
+When('{Maker} scores {int}', async function (maker, score) {
+  await maker.score({score})
+})
+
 Then('{Maker} should be waiting for a breaker to join', function (maker) {
   assert.equal(maker.getCurrentGame().state, 'waiting-for-breaker-to-join')
 })

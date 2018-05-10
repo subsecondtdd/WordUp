@@ -7,6 +7,10 @@ Given('{Breaker} has joined {Maker}\'s game', async function (breaker, maker) {
   await breaker.join({gameId})
 })
 
+Given('{Breaker} has made a guess', async function (breaker) {
+  await breaker.guess({word: 'stale'})
+})
+
 When('{Breaker} joins {Maker}\'s game', async function (breaker, maker) {
   const {gameId} = maker.getCurrentGame()
   await breaker.join({gameId})
