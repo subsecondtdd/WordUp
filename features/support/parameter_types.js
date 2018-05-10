@@ -2,18 +2,17 @@ const {defineParameterType} = require('cucumber')
 const Maker = require('./Maker')
 const Breaker = require('./Breaker')
 
-defineParameterType({
-  name: 'Maker',
-  regexp: /M[a-z]+/,
-  transformer(characterName) {
-    return this.findOrCreateCharacter({Role: Maker, characterName})
-  }
-})
+characters = [
+  {Role: Maker, regexp: /M[a-z]+/},
+  {Role: Breaker, regexp: /B[a-z]+/},
+]
 
-defineParameterType({
-  name: 'Breaker',
-  regexp: /B[a-z]+/,
-  transformer(characterName) {
-    return this.findOrCreateCharacter({Role: Breaker, characterName})
-  }
-})
+for (const {Role, regexp} of characters) {
+  defineParameterType({
+    name: Role.name,
+    regexp,
+    transformer(characterName) {
+      return this.findOrCreateCharacter({Role, characterName})
+    }
+  })
+}
