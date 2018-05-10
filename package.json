@@ -7,6 +7,9 @@
   "author": "Steve Tooke <tooky@cucumber.io>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "test": "cucumber-js"
+  },
   "devDependencies": {
     "cucumber": "^4.2.1"
   }
