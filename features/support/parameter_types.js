@@ -3,7 +3,7 @@ const Maker = require('./Maker')
 const Breaker = require('./Breaker')
 
 defineParameterType({
-  name: 'maker',
+  name: 'Maker',
   regexp: /M[a-z]+/,
   transformer(characterName) {
     return this.findOrCreateCharacter({Role: Maker, characterName})
@@ -11,7 +11,7 @@ defineParameterType({
 })
 
 defineParameterType({
-  name: 'breaker',
+  name: 'Breaker',
   regexp: /B[a-z]+/,
   transformer(characterName) {
     return this.findOrCreateCharacter({Role: Breaker, characterName})
