@@ -18,13 +18,13 @@ When('{Maker} scores {int}', async function (maker, score) {
 })
 
 Then('{Maker} should be waiting for a breaker to join', function (maker) {
-  assert.equal(maker.getCurrentGame().state, 'waiting-for-breaker-to-join')
+  assert.equal(maker.getCurrentState(), 'waiting-for-breaker-to-join')
 })
 
 Then('{Maker} should not be in a game', function (maker) {
-  assert.equal(maker.getCurrentGame(), null)
+  assert(!maker.hasCurrentGame())
 })
 
 Then('{Maker} should be waiting for a guess', function (maker) {
-  assert.equal(maker.getCurrentGame().state, 'waiting-for-guess')
+  assert.equal(maker.getCurrentState(), 'waiting-for-guess')
 })

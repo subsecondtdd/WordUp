@@ -18,8 +18,15 @@ module.exports = class Maker {
   }
 
   // Test Views
+  hasCurrentGame() {
+    return Boolean(this._currentGame)
+  }
 
-  getCurrentGame() {
-    return this._currentGame
+  getCurrentState() {
+    return this._currentGame.state
+  }
+
+  getCurrentGameId() {
+    return this._currentGame.gameId
   }
 }
