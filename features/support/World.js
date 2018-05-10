@@ -1,7 +1,5 @@
 const {MemoryPublisher} = require('pubsub-multi')
 const {setWorldConstructor} = require('cucumber')
-const Maker = require('./Maker')
-const Breaker = require('./Breaker')
 const Engine = require('../../lib/domain/Engine.js')
 
 class World {
@@ -11,19 +9,9 @@ class World {
     this._cast = new Map()
   }
 
-  findOrCreateMaker({characterName}) {
+  findOrCreateCharacter({Role, characterName}) {
     if (!this._cast.has(characterName)) {
-      this._cast.set(characterName, new Maker({
-        engine: this._engine,
-        subscriber: this._pubSub.makeSubscriber()
-      }))
-    }
-    return this._cast.get(characterName)
-  }
-
-  findOrCreateBreaker({characterName}) {
-    if (!this._cast.has(characterName)) {
-      this._cast.set(characterName, new Breaker({
+      this._cast.set(characterName, new Role({
         engine: this._engine,
         subscriber: this._pubSub.makeSubscriber()
       }))
