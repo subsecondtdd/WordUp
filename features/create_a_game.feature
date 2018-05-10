@@ -12,6 +12,10 @@ Feature: Create a game
   * All letters in the word must be unique (defer verification)
   * Words should be English (for now) (defer verification)
 
-  Scenario: you create a game
+  Scenario: Maker creates a new game
     When Mike creates a game
     Then Mike should be waiting for a breaker to join
+
+  Scenario: Maker does not create a game
+    Given Mike is not playing a game
+    Then Mike should not be waiting for a breaker to join
