@@ -18,4 +18,4 @@ Feature: Create a game
 
   Scenario: Maker does not create a game
     Given Mike is not playing a game
-    Then Mike should not be waiting for a breaker to join
+    Then Mike should not be in a game

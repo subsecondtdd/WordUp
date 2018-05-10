@@ -12,5 +12,8 @@
   },
   "devDependencies": {
     "cucumber": "^4.2.1"
+  },
+  "dependencies": {
+    "pubsub-multi": "^1.2.1"
   }
 }
