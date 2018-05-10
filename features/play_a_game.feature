@@ -18,3 +18,9 @@ Feature: Play a game
     Given Bev has joined Mike's game
     When Bev makes a guess
     Then Bev should be waiting for a score
+
+  Scenario: Breaker asked to guess again
+    Given Bev has joined Mike's game
+    And Bev has made a guess
+    When Mike scores 3
+    Then Mike should be waiting for a guess
