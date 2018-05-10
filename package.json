@@ -6,5 +6,8 @@
   "repository": "https://github.com/subsecondtdd/WordUp.git",
   "author": "Steve Tooke <tooky@cucumber.io>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "cucumber": "^4.2.1"
+  }
 }
