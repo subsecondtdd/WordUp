@@ -1,0 +1,10 @@
+{
+  "name": "WordUp",
+  "version": "1.0.0",
+  "description": "A word guessing game with subsecond acceptance tests...",
+  "main": "server.js",
+  "repository": "https://github.com/subsecondtdd/WordUp.git",
+  "author": "Steve Tooke <tooky@cucumber.io>",
+  "license": "MIT",
+  "private": true
+}
